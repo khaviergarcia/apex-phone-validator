@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>ES (+34)</label>
+    <protected>false</protected>
+    <values>
+        <field>CountryCode__c</field>
+        <value xsi:type="xsd:double">34.0</value>
+    </values>
+    <values>
+        <field>FixedLineRegex__c</field>
+        <value xsi:type="xsd:string">96906(?:0[0-8]|1[1-9]|[2-9]\d)\d\d|9(?:69(?:0[0-57-9]|[1-9]\d)|73(?:[0-8]\d|9[1-9]))\d{4}|(?:8(?:[1356]\d|[28][0-8]|[47][1-9])|9(?:[135]\d|[268][0-8]|4[1-9]|7[124-9]))\d{6}</value>
+    </values>
+    <values>
+        <field>GeneralDescRegex__c</field>
+        <value xsi:type="xsd:string">[5-9]\d{8}</value>
+    </values>
+    <values>
+        <field>IsoCode__c</field>
+        <value xsi:type="xsd:string">ES</value>
+    </values>
+    <values>
+        <field>MobileRegex__c</field>
+        <value xsi:type="xsd:string">96906(?:09|10)\d\d|(?:590(?:10[0-2]|600)|97390\d)\d{3}|(?:6\d|7[1-48])\d{7}</value>
+    </values>
+</CustomMetadata>

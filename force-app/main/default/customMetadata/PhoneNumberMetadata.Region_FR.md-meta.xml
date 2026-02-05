@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>FR (+33)</label>
+    <protected>false</protected>
+    <values>
+        <field>CountryCode__c</field>
+        <value xsi:type="xsd:double">33.0</value>
+    </values>
+    <values>
+        <field>FixedLineRegex__c</field>
+        <value xsi:type="xsd:string">(?:26[013-9]|59[1-35-9])\d{6}|(?:[13]\d|2[0-57-9]|4[1-9]|5[0-8])\d{7}</value>
+    </values>
+    <values>
+        <field>GeneralDescRegex__c</field>
+        <value xsi:type="xsd:string">[1-9]\d{8}</value>
+    </values>
+    <values>
+        <field>IsoCode__c</field>
+        <value xsi:type="xsd:string">FR</value>
+    </values>
+    <values>
+        <field>MobileRegex__c</field>
+        <value xsi:type="xsd:string">(?:6(?:[0-24-8]\d|3[0-8]|9[589])|7[3-9]\d)\d{6}</value>
+    </values>
+</CustomMetadata>
