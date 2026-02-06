@@ -59,12 +59,12 @@ public class PhoneValidator {
     private static PhoneNumberMetadata__mdt getMetadata(String isoCode) {
         if (metadataCache == null) {
             metadataCache = new Map<String, PhoneNumberMetadata__mdt>();
-            // Traemos todos o filtramos. CMDT no consume query limits tradicionales pero es bueno ser selectivo.
-            // Ajusta esta query según tus necesidades.
+      
             for (PhoneNumberMetadata__mdt m : [
                 SELECT DeveloperName, IsoCode__c, CountryCode__c, 
                        GeneralDescRegex__c, MobileRegex__c, FixedLineRegex__c 
                 FROM PhoneNumberMetadata__mdt
+                WHERE IsoCode__c = :isoCode
             ]) {
                 metadataCache.put(m.IsoCode__c, m);
             }
