@@ -7,6 +7,44 @@
 
 ---
 
+## English
+
+Validates phone numbers for 200+ countries using regular expressions from [google/libphonenumber](https://github.com/google/libphonenumber).
+
+### Usage
+
+```apex
+// With country code
+Boolean isValid = PhoneValidator.isValidNumber('+34612345678', 'ES');
+
+// Without country code
+Boolean isValid = PhoneValidator.isValidNumber('612345678', 'ES');
+
+// With special characters
+Boolean isValid = PhoneValidator.isValidNumber('+34 (612) 345-678', 'ES');
+```
+
+### Files
+
+- `PhoneValidator.cls` - Main validation class
+- `PhoneValidator_Test.cls` - Unit tests
+- `PhoneNumberMetadata__mdt` - Metadata with regex by country
+
+### Tests
+
+Run tests:
+```bash
+sf apex test run --class-names PhoneValidator_Test
+```
+
+Playground in javascript [google/libphonenumber-playground](https://htmlpreview.github.io/?https://github.com/google/libphonenumber/blob/master/javascript/i18n/phonenumbers/demo-compiled.html)
+
+### Countries
+
+See [`PhoneMetadata_Upload.csv`](PhoneMetadata_Upload.csv) for the complete list of supported countries.
+
+---
+
 ## Español
 
 Valida números de teléfono para más de 200 países usando expresiones regulares de [google/libphonenumber](https://github.com/google/libphonenumber).
@@ -43,41 +81,3 @@ Playground en Javascript [google/libphonenumber-playground](https://htmlpreview.
 ### Países
 
 Consulta [`PhoneMetadata_Upload.csv`](PhoneMetadata_Upload.csv) para la lista completa de países soportados.
-
----
-
-## English
-
-Validates phone numbers for 200+ countries using regular expressions from [google/libphonenumber](https://github.com/google/libphonenumber).
-
-### Usage
-
-```apex
-// With country code
-Boolean isValid = PhoneValidator.isValidNumber('+34612345678', 'ES');
-
-// Without country code
-Boolean isValid = PhoneValidator.isValidNumber('612345678', 'ES');
-
-// With special characters
-Boolean isValid = PhoneValidator.isValidNumber('+34 (612) 345-678', 'ES');
-```
-
-### Files
-
-- `PhoneValidator.cls` - Main validation class
-- `PhoneValidator_Test.cls` - Unit tests
-- `PhoneNumberMetadata__mdt` - Metadata with regex by country
-
-### Tests
-
-Run tests:
-```bash
-sf apex test run --class-names PhoneValidator_Test
-```
-
-Playground in javascript [google/libphonenumber-playground](https://htmlpreview.github.io/?https://github.com/google/libphonenumber/blob/master/javascript/i18n/phonenumbers/demo-compiled.html)
-
-### Countries
-
-See [`PhoneMetadata_Upload.csv`](PhoneMetadata_Upload.csv) for the complete list of supported countries.
