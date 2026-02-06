@@ -34,6 +34,9 @@ Ejecutar tests:
 sf apex test run --class-names PhoneValidator_Test
 ```
 
+Playground en Javascript [google/libphonenumber-playground](https://htmlpreview.github.io/?https://github.com/google/libphonenumber/blob/master/javascript/i18n/phonenumbers/demo-compiled.html)
+
+
 ### Países
 
 Consulta [`PhoneMetadata_Upload.csv`](PhoneMetadata_Upload.csv) para la lista completa de países soportados.
@@ -69,6 +72,8 @@ Run tests:
 ```bash
 sf apex test run --class-names PhoneValidator_Test
 ```
+
+Playground in javascript [google/libphonenumber-playground](https://htmlpreview.github.io/?https://github.com/google/libphonenumber/blob/master/javascript/i18n/phonenumbers/demo-compiled.html)
 
 ### Countries
 
