@@ -46,3 +46,6 @@ $RECYCLE.BIN/
 **/__pycache__/
 **/.venv/
 **/venv/
+force-app/extract_xml_to_csv
+force-app/extract_xml_to_csv_old
+
