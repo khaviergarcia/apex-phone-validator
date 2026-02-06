@@ -8,6 +8,7 @@ public class PhoneValidator {
      * Valida un número de teléfono dado un código de país ISO (ej: 'ES')
      * Retorna true si es válido (Móvil o Fijo).
      */
+    @AuraEnabled(cacheable=true)
     public static Boolean isValidNumber(String phoneNumber, String isoCountryCode) {
         if(String.isBlank(phoneNumber) || String.isBlank(isoCountryCode)) return false;
 
@@ -27,16 +28,14 @@ public class PhoneValidator {
             cleanedNumber = cleanedNumber.substring(countryPrefix.length());
         }
 
-        // 3. Validación General (Optimización: Si falla esto, falla todo)
-        if(!matchesRegex(cleanedNumber, metadata.GeneralDescRegex__c)){
-            return false;
-        }
+ 
 
-        // 4. Validación Específica (Es movil O es fijo?)
+        // 3. Validación General o Específica (Es movil O es fijo?)
+        boolean generalNumber = matchesRegex(cleanedNumber, metadata.GeneralDescRegex__c);
         boolean isMobile = matchesRegex(cleanedNumber, metadata.MobileRegex__c);
         boolean isFixed = matchesRegex(cleanedNumber, metadata.FixedLineRegex__c);
 
-        return isMobile || isFixed;
+        return generalNumber || isMobile || isFixed;
     }
 
     private static Boolean matchesRegex(String input, String regexPattern) {
