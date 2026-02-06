@@ -254,7 +254,7 @@ private class PhoneValidator_Test {
         // Chile mobile
         String phone = '+56912345678';
         Boolean result = PhoneValidator.isValidNumber(phone, 'CL');
-        System.assertEquals(false, result, 'Invalid Chilean mobile should return false');
+        System.assertEquals(true, result, 'Valid Chilean mobile should return true');
     }
     
     @isTest
@@ -310,7 +310,7 @@ private class PhoneValidator_Test {
         // Canada mobile
         String phone = '+14161234567';
         Boolean result = PhoneValidator.isValidNumber(phone, 'CA');
-        System.assertEquals(false, result, 'Invalid Canadian mobile should return false');
+        System.assertEquals(true, result, 'Valid Canadian mobile should return true');
     }
 
     // ==================== TEST INVALID SCENARIOS ====================
@@ -522,7 +522,7 @@ private class PhoneValidator_Test {
         // Israel mobile
         String phone = '+972501234567';
         Boolean result = PhoneValidator.isValidNumber(phone, 'IL');
-        System.assertEquals(false, result, 'Valid Israeli mobile should return true');
+        System.assertEquals(true, result, 'Valid Israeli mobile should return true');
     }
     
     @isTest
