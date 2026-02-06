@@ -10,7 +10,7 @@ OUTPUT_FILENAME = "PhoneMetadata_Upload.csv"
 
 # LISTA DE PAÍSES:
 # Agrega aquí los códigos ISO (2 letras) de los países que necesitas.
-# Dejar la lista vacía [] descargará TODOS los países (Cuidado: +250 registros).
+# Dejar la lista vacía [] descargará TODOS los países
 TARGET_COUNTRIES = []
 # =================================================
 
@@ -86,7 +86,7 @@ def main():
     print(f"3. Generando CSV con {len(rows_to_insert)} registros...")
     
     csv_headers = [
-        'DeveloperName', 'Label', 
+        'DeveloperName', 'MasterLabel', 
         'IsoCode__c', 'CountryCode__c', 
         'GeneralDescRegex__c', 'MobileRegex__c', 'FixedLineRegex__c'
     ]
